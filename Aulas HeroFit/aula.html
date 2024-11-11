@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/43d6fb86d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Aulas-HeroFit</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1 class="logo"><span>Hero</span>Fit</h1>
+            <nav class="menu-header">
+                <ul class="lista-itens">
+                    <li><a href="/Principal basico HeroFit/index.html">Inicio</a></li>
+                    <li><a href="/Servicos HeroFit/index.html">Serviços</a></li>
+                    <li><a href="/Aulas HeroFit/aula.html">Aulas</a></li>
+                    <li><a href="/Treino HeroFit/treino.html">Treinos</a></li>
+                    <li><a href="/Planos HeroFit/index.html">Planos</a></li>
+                    <li><a href="/Feedbacks HeroFit/index.html">Feedback</a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <h1 class="texto-primario">AGENDAMENTO DE AULAS</h1>
+            <div class="tabela">
+                <table class="schedule-table">
+                    <thead>
+                        <tr>
+                            <th>Dia</th>
+                            <th>Boxe</th>
+                            <th>FitDance</th>
+                            <th>FitBike</th>
+                            <th>Funcional</th>
+                            <th>Ação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Segunda-feira</td>
+                            <td>10:00 - 11:00 <input type="checkbox" name="boxe-segunda" class="schedule-checkbox"></td>
+                            <td>15:00 - 16:00 <input type="checkbox" name="fitdance-segunda" class="schedule-checkbox"></td>
+                            <td>18:00 - 19:00 <input type="checkbox" name="fitbike-segunda" class="schedule-checkbox"></td>
+                            <td>20:00 - 21:00 <input type="checkbox" name="funcional-segunda" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td> 
+                        </tr>
+                        <tr>
+                            <td>Terça-feira</td>
+                            <td>10:00 - 11:00 <input type="checkbox" name="boxe-terca" class="schedule-checkbox"></td>
+                            <td>15:00 - 16:00 <input type="checkbox" name="fitdance-terca" class="schedule-checkbox"></td>
+                            <td>18:00 - 19:00 <input type="checkbox" name="fitbike-terca" class="schedule-checkbox"></td>
+                            <td>20:00 - 21:00 <input type="checkbox" name="funcional-terca" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Quarta-feira</td>
+                            <td>10:00 - 11:00 <input type="checkbox" name="boxe-quarta" class="schedule-checkbox"></td>
+                            <td>15:00 - 16:00 <input type="checkbox" name="fitdance-quarta" class="schedule-checkbox"></td>
+                            <td>18:00 - 19:00 <input type="checkbox" name="fitbike-quarta" class="schedule-checkbox"></td>
+                            <td>20:00 - 21:00 <input type="checkbox" name="funcional-quarta" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Quinta-feira</td>
+                            <td>10:00 - 11:00 <input type="checkbox" name="boxe-quinta" class="schedule-checkbox"></td>
+                            <td>15:00 - 16:00 <input type="checkbox" name="fitdance-quinta" class="schedule-checkbox"></td>
+                            <td>18:00 - 19:00 <input type="checkbox" name="fitbike-quinta" class="schedule-checkbox"></td>
+                            <td>20:00 - 21:00 <input type="checkbox" name="funcional-quinta" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sexta-feira</td>
+                            <td>10:00 - 11:00 <input type="checkbox" name="boxe-sexta" class="schedule-checkbox"></td>
+                            <td>15:00 - 16:00 <input type="checkbox" name="fitdance-sexta" class="schedule-checkbox"></td>
+                            <td>18:00 - 19:00 <input type="checkbox" name="fitbike-sexta" class="schedule-checkbox"></td>
+                            <td>20:00 - 21:00 <input type="checkbox" name="funcional-sexta" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td>
+                        </tr>
+                        <tr>
+                            <td>Sábado</td>
+                            <td>07:30 - 08:30 <input type="checkbox" name="boxe-sabado" class="schedule-checkbox"></td>
+                            <td>09:00 - 10:00 <input type="checkbox" name="fitdance-sabado" class="schedule-checkbox"></td>
+                            <td>10:30 - 11:30 <input type="checkbox" name="fitbike-sabado" class="schedule-checkbox"></td>
+                            <td>14:30 - 15:30 <input type="checkbox" name="funcional-sabado" class="schedule-checkbox"></td>
+                            <td><button onclick="abrirAlerta()" class="agendar-btn">Agendar</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function abrirAlerta(){
+        swal({
+            title: "Reserva Confirmada!",
+            text: "Esperamos você",
+            icon: "success",
+});
+    }
+</script>
+</html>
+

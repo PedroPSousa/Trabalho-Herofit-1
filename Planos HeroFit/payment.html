@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pagamento - HeroFit</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #68217a;
+            margin-bottom: 20px;
+        }
+
+     
+        form {
+            width: 100%;
+            max-width: 500px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 1rem;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            border-color: #68217a;
+            outline: none;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.875rem;
+            margin-bottom: 15px;
+            display: none;
+        }
+
+        .error-border {
+            border-color: red !important;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 1rem;
+            font-weight: bold;
+            background-color: #68217a;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #4e1761;
+        }
+
+        
+        @media (max-width: 500px) {
+            form {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form id="paymentForm">
+        <h1>Formulário de Pagamento</h1>
+        
+        <label for="plan">Plano Selecionado:</label>
+        <input type="text" id="plan" name="plan" readonly placeholder="Plano não especificado">
+
+        <label for="name">Nome Completo:</label>
+        <input type="text" id="name" name="name" required>
+        <div class="error-message" id="name-error">O nome deve ter no mínimo 3 caracteres.</div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <div class="error-message" id="email-error">Por favor, insira um e-mail válido.</div>
+
+        <label for="card-number">Número do Cartão:</label>
+        <input type="text" id="card-number" name="card-number" required>
+        <div class="error-message" id="card-error">O número do cartão deve conter exatamente 16 dígitos.</div>
+
+        <label for="expiry-date">Data de Expedição:</label>
+        <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/DD/YYYY" required>
+        <div class="error-message" id="expiry-error">A data de expedição deve estar no formato MM/DD/YYYY.</div>
+
+        <label for="cvv">Código de Segurança (CVV):</label>
+        <input type="text" id="cvv" name="cvv" required>
+        <div class="error-message" id="cvv-error">O código CVV deve conter exatamente 3 dígitos.</div>
+
+        <button type="submit">Pagar Agora</button>
+    </form>
+
+    <script src="validation.js"></script>
+</body>
+</html>

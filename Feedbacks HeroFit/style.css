@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Poppins", sans-serif;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.2);
+}
+
+.menu {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+    background: #000;
+}
+
+.logo {
+    font-size: 3.5rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #6747a3;
+}
+
+.menu .lista-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu .lista-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu .lista-itens a:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #6747a3;
+    transition: all 1.5s ease;
+}
+
+.menu .lista-itens a:hover:before {
+    width: 100%;
+}
+
+main {
+    height: 93vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.review {
+    background: #000;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rewiew-box {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.review .heading {
+    font-size: 5.5rem;
+    color: #6747a3; 
+    text-align: center; 
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+} 
+
+.heading:hover {
+    transform: scale(1.05); 
+    color: #6747a3; 
+    text-shadow: 2px 2px 15px purple; 
+}
+
+.review .heading span {
+    color: white;
+}
+
+.review-box img {
+    width: 15rem;
+    border-radius: 50%;
+    border: 3px solid #6747a3; 
+}
+
+.wrapper {
+    display:block;
+    grid-template-columns: repeat(3,1fr);
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.review-item {
+    min-height: 450px;
+    min-width: 350px;
+    background: #000;
+    border: 3px solid #6747a3;
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 30px 60px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    color: white;
+    transition: 0.5s ease-in-out;
+}
+
+.review-item:hover {
+    border: 3px solid #6747a3;
+    transform: translateY(-5px) scale(1.03);
+}
+
+.review-item h2 {
+    font-size: 2.8rem;
+}
+
+.review-item p {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+#star {
+    color: gold;
+    font-size: 2rem;
+}
+
+fieldset {
+    border: 2px solid #6747a3;
+    border-radius: 5px;
+    padding: 1rem;
+    display:grid;
+    text-align: center;
+    justify-content: center;
+}
+
+legend {
+    color: #6747a3;
+    padding: 0 0.5rem;
+    font-size: 2rem;
+}
+
+textarea {
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #6747a3;
+}
+
+button {
+    background-color: #6747a3;
+    border: none;
+    padding: 0.8rem;
+    color: #6747a3;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.feed {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+}
+
+.feed:hover {
+    transform: scale(1.05); 
+    color: #6747a3; 
+    text-shadow: 2px 2px 15px purple;
+}
+
+label {
+    font-size: 2rem;
+}
+
+input::placeholder {
+    font-size: 1.5rem;
+}
+
+textarea::placeholder {
+    font-size: 1.5rem;
+}
+
+.bnt {
+    background-color: #6747a3;
+    color: white; 
+    padding: 14px 26px; 
+    border: none; 
+    border-radius: 10px;
+    font-size: 1.4rem; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+.bnt:hover {
+    background-color: #6747a3; 
+    transform: scale(1.05);
+}

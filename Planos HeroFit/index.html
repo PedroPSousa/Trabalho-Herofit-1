@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/43d6fb86d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>HeroFit-Planos</title>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <h1 class="logo"><span>Hero</span>Fit</h1>
+            <nav class="menu-header">
+                <ul class="lista-itens">
+                    <li><a href="/Principal basico HeroFit/index.html">Inicio</a></li>
+                    <li><a href="/Servicos HeroFit/index.html">Serviços</a></li>
+                    <li><a href="/Aulas HeroFit/aula.html">Aulas</a></li>
+                    <li><a href="/Treino HeroFit/treino.html">Treinos</a></li>
+                    <li><a href="/Planos HeroFit/index.html">Planos</a></li>
+                    <li><a href="/Feedbacks HeroFit/index.html">Feedback</a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="pricing" class="pricing">
+        <div class="information">
+            <span>Plano de Preços</span>
+            <h3>Plano de preços acessível para você</h3>
+            <p>Falar um pouco sobre isso</p>
+            <p><i class="fa-solid fa-check"></i> Exercícios de Cardio </p>
+            <p><i class="fa-solid fa-check"></i> Levantamento de Peso</p>
+            <p><i class="fa-solid fa-check"></i> Planos Alimentares </p>
+            <p><i class="fa-solid fa-check"></i> Acompanhamento de Resultados </p>
+        </div>
+        <div class="plan basic">
+            <h3>Plano Básico</h3>
+            <div class="price"><span>R$</span>80<span>/mês</span></div>
+            <div class="list">
+                <p><i class="fa-solid fa-check"></i> Acesso em horários específicos </p>
+                <p><i class="fa-solid fa-check"></i> Acesso a todos os equipamentos </p>
+                <p><i class="fa-solid fa-check"></i> Acompanhamento de Resultados</p>
+            </div>
+            <a href="payment.html?plan=Plano%20Básico" class="btn">Quero</a>
+        </div>
+        <div class="plan inter">
+            <h3>Plano Intermediário</h3>
+            <div class="price"><span>R$</span>110<span>/mês</span></div>
+            <div class="list">
+                <p><i class="fa-solid fa-check"></i> Acesso Total a Academia  </p>
+                <p><i class="fa-solid fa-check"></i> Participação em Aulas Coletivas </p>
+                <p><i class="fa-solid fa-check"></i> Acesso a Todos os Equipamentos </p>
+                <p><i class="fa-solid fa-check"></i> Acompanhamento de Resultados </p>
+            </div>
+            <a href="payment.html?plan=Plano%20Intermediário" class="btn">Quero</a>
+        </div>
+        <div class="plan">
+            <h3>Plano Premium</h3>
+            <div class="price"><span>R$</span>150<span>/mês</span></div>
+            <div class="list">
+                <p><i class="fa-solid fa-check"></i> Acesso Total a Academia </p>
+                <p><i class="fa-solid fa-check"></i> Aulas Especiais </p>
+                <p><i class="fa-solid fa-check"></i> Sessão Semanal com Personal Trainer </p>
+                <p><i class="fa-solid fa-check"></i> Avaliação Fisica a Cada 6 Meses </p>
+                <p><i class="fa-solid fa-check"></i> Acompanhamento de Resultados </p>
+            </div>
+            <a href="payment.html?plan=Plano%20Premium" class="btn">Quero</a>
+        </div>
+        <div class="plan anual">
+            <h3>Plano Anual</h3>
+            <div class="price"><span>R$</span>1100<span>/ano</span></div>
+            <div class="list">
+                <p><i class="fa-solid fa-check"></i> Acesso Total a Academia </p>
+                <p><i class="fa-solid fa-check"></i> Acesso Completo por 12 Meses </p>
+                <p><i class="fa-solid fa-check"></i> Avaliação Fisica a Cada 6 Meses </p>
+                <p><i class="fa-solid fa-check"></i> Aulas Especiais </p>
+                <p><i class="fa-solid fa-check"></i> Sessão Semanal com Personal Trainer </p>
+                <p><i class="fa-solid fa-check"></i> Desconto em Relação a Todos os Planos </p>
+                <p><i class="fa-solid fa-check"></i> Acompanhamento de Resultados </p>
+            </div>
+            <a href="payment.html?plan=Plano%20Anual" class="btn">Quero</a>
+        </div>
+    </section>
+
+   
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const buttons = document.querySelectorAll(".btn");
+
+            buttons.forEach((button, index) => {
+                button.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const plans = ["Plano Básico", "Plano Intermediário", "Plano Premium", "Plano Anual"];
+                    const selectedPlan = plans[index];
+
+                    
+                    window.location.href = `payment.html?plan=${encodeURIComponent(selectedPlan)}`;
+                });
+            });
+        });
+    </script>
+</body>
+</html>

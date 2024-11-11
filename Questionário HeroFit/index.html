@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/43d6fb86d2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Questionário-HeroFit</title>
+</head>
+<body>
+    <div class="quest">
+        <h1 class="title">Questionário Para Treino Personalizado</h1>
+        <form>
+            <div>
+                <h2 class="subtitle">1-Informações Pessoais</h2>
+                <h3 class="idade">Data de Nascimento:</h3>
+                <input type="date">
+            </div>
+            <div>
+                <h3 class="sexo">Sexo:</h3>
+                <input type="radio" id="feminino" name="genero" value="feminino" required>
+                <label for="feminino">Feminino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino" required> 
+                <label for="masculino">Masculino</label> 
+            </div>
+            <div>
+                <h3 class="peso">Peso:</h3>
+                <input type="text" placeholder="Digite seu peso(kg)...">
+            </div>
+            <div>
+                <h3 class="altura">Altura:</h3>
+                <input type="text" placeholder="Digite sua altura(metros)...">
+            </div>
+            <div>
+                <h3 class="email">E-mail:</h3>
+                <input type="email" placeholder="Informe seu e-mail...">
+            </div>
+            <div>
+                <h3 class="endereco">Endereço:</h3>
+                <input type="text" placeholder="Informe seu endereço...">
+            </div>
+            <div>
+                <h3 class="telefone">Telefone:</h3>
+                <input type="tel" placeholder="(xx) xxxxx-xxxx">
+            </div>
+            <div>
+                <h3 class="restricao">Alguma restrição alimentar?:</h3>
+                <input type="radio" id="sim" name="rest" value="sim" required>
+                <label for="sim">Sim</label>
+                <input type="radio" id="nao" name="rest" value="nao" required>
+                <label for="nao">Não</label>
+            </div>
+            <div>
+                <h3 class="qual">Se sim, qual?</h3>
+                <input type="text" placeholder="Informe para a gente..">
+            </div>
+            <div>
+                <h2 class="subtitle">2-Histórico de Saúde</h2>
+                <h3 class="hist">Você tem algum problema de saúde que possa afetar a prática de exercícios?</h3>
+                <input type="text" placeholder="Informe para a gente..">
+            </div>
+            <div>
+                <h2 class="subtitle">3-Nível de atividade:</h3>
+                <input type="radio" id="iniciante" name="nivel" value="iniciante" required>
+                <label for="iniciante">Iniciante</label>
+                <input type="radio" id="inter" name="nivel" value="inter" required>
+                <label for="inter">Intermediário</label>
+                <input type="radio" id="adv" name="nivel" value="adv" required>
+                <label for="adv">Avançado</label>
+            </div>
+            <div>
+                <h2 class="subtitle">Objetivo:</h3>
+                <input type="radio" id="perder" name="obj" value="perder" required>
+                <label for="perder">Perder peso</label>
+                <input type="radio" id="ganhar" name="obj" value="ganhar" required>
+                <label for="ganhar">Ganhar peso</label>
+                <input type="radio" id="outro" name="obj" value="outro" required>
+                <label for="outro">Outro</label>
+            </div>
+            <div>
+                <h2 class="subtitle">Qual o horário mais coveniente para você?</h3>
+                <input type="radio" id="manha" name="horario" value="manha" required>
+                <label for="manha">Manha</label>
+                <input type="radio" id="tarde" name="horario" value="tarde" required>
+                <label for="tarde">Tarde</label>
+                <input type="radio" id="noite" name="horario" value="noite" required>
+                <label for="noite">Noite</label>
+            </div>
+            <div>
+                <h2 class="subtitle">Com que frequencia você pretende frequentar a academia?</h3>
+                <input type="radio" id="1-2" name="freq" value="1-2" required>
+                <label for="1-2">1-2 vezes por semana</label>
+                <input type="radio" id="3-4" name="freq" value="3-4" required>
+                <label for="3-4">3-4 vezes por semana</label>
+                <input type="radio" id="diar" name="freq" value="diar" required>
+                <label for="diar">Diariamente</label>
+            </div>
+            <div>
+                
+                <input type="button" class="bnt" value="Enviar" onclick="window.location.href='/Principal basico herofit/index.html'">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

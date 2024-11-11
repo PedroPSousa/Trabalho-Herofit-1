@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: linear-gradient(to right top, #9d6df9, black); 
+    background-size: cover; 
+    background-attachment: fixed; 
+    height: 100vh; 
+    padding: 20px;
+}
+
+.quest {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    text-align: center;
+    padding: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    margin-bottom: 30px; 
+    z-index: 999;
+    transition: all 0.4s ease-in-out
+}
+
+.title:hover {
+    transform: scale(1.05); 
+    color: #6747a3; 
+    text-shadow: 2px 2px 15px purple; 
+}
+
+.subtitle {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin: 15px 0 5px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="date"], textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="date"]:focus, textarea:focus {
+    border-color: white;
+    outline: none;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+    margin-top: 10px;
+    cursor: pointer;
+    width: 25px;
+    height: 25px; 
+    transform: scale(0.8);
+    cursor: pointer;
+}
+
+label {
+    margin-right: 15px;
+    font-size: 1.5rem;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#comentario {
+    display: none;
+}
+
+input[type="radio"]:checked + label + #comentario {
+    display: block;
+}
+
+div {
+    margin-bottom: 20px;
+}
+
+.bnt {
+    background-color: #6747a3;
+    color: white; 
+    padding: 12px 24px; 
+    border: none; 
+    border-radius: 10px;
+    font-size: 1.4rem; 
+    font-weight: bold; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease-in-out;
+    display: inline-block;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 65rem;
+}
+
+.bnt:hover {
+    background-color: #6747a3; 
+    transform: scale(1.05);
+}

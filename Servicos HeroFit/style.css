@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    background: #000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(22, 22, 22, 0.2);
+}
+
+.menu {
+    text-transform: uppercase;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.logo {
+    font-size: 3.5rem;
+    letter-spacing: 0.4rem;
+    cursor: pointer;
+}
+
+.logo span {
+    color: #6747a3;
+}
+
+.menu .lista-itens {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.menu .lista-itens a {
+    text-decoration: none;
+    color: white;
+    padding: 1.5rem;
+    transform: 2ms ease-in;
+    position: relative;
+}
+
+.menu .lista-itens a:before {
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 0px;
+    height: 1px;
+    background-color: #6747a3;
+    transition: all 1.5s ease;
+}
+
+.menu .lista-itens a:hover:before {
+    width: 100%;
+}
+
+.heading {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    padding: 3rem;
+    font-size: 3.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+}
+
+.heading:hover {
+    transform: scale(1.05); 
+    color: #6747a3; 
+    text-shadow: 2px 2px 15px purple; 
+}
+
+.features {
+    width: 100%; 
+    height: 120rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.features .box-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    grid-template-columns: repeat(hero-fit, minmax(32rem, 1fr));
+    width: 100%; 
+    height: auto; 
+    padding: 0 2rem; 
+    box-sizing: border-box; 
+}
+
+.features .box-container .box {
+    background: #111;
+}
+
+.features .box-container .box.second {
+    display: flex;
+    flex-flow: column-reverse;
+}
+
+.features .box-container .box:hover .image img {
+    transform: scale(1.1);
+}
+.features .box-container .box .image {
+    height: 30rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+.features .box-container .box .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.features .box-container .box .content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.features .box-container .box .content img {
+    height: 9rem;
+    margin-bottom: 1rem;
+    filter: invert(1);
+}
+
+.features .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #6747a3;
+}
+
+.features .box-container .box .content p {
+    line-height: 2;
+    font-size: 1.5rem;
+    color: #aaa;
+    padding: 1rem 0;
+}
+
+.btn {
+    font-size: 17px;
+    text-decoration: none;
+}
+
+.trainers .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(29rem, 1fr));
+    gap: 1.5rem;
+}
+
+.trainers .box-container .box {
+    height: 40rem;
+    overflow: hidden;
+    position: relative;
+}
+.trainers .box-container .box:hover .content {
+    transform: translateY(0);
+}
+
+.trainers .box-container .box img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60rem;
+    width: 100%;
+    object-fit: cover;
+}
+.trainers .box-container .box .content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    padding: 2rem;
+    transform: translateY(6.5rem);
+}
+
+.trainers .box-container .box .content span {
+    font-size: 1.5rem;
+    color: #6747a3;
+}
+
+.trainers .box-container .box .content h3 {
+    font-size: 2rem;
+    color: #fff;
+    padding-top: .5rem;
+}
+.trainers .box-container .box .content .share {
+    padding-top: 2rem;
+    margin-top: 1.5rem;
+    border-top: 0.1rem solid #aaa;
+}
+
+.trainers .box-container .box .content .share a {
+    font-size: 2rem;
+    color: #fff;
+    margin-right: 1.5rem;
+}
+
+.trainers .box-container .box .content .share a:hover {
+    color: #6747a3;
+}
+
+.te {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding: 4rem;
+    font-size: 3.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+    z-index: 999;
+    transition: all 0.4s ease-in-out;
+}
+
+.te:hover {
+    transform: scale(1.05); 
+    color: #6747a3; 
+    text-shadow: 2px 2px 15px purple; 
+}
